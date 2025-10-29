@@ -1,0 +1,43 @@
+body{
+    background-color: rgba(44, 110, 110, 0.301);
+}
+header{
+    border: 3px solid rgb(0, 25, 79);
+    background-color: rgb(68, 68, 156);
+}
+h1{
+    background-color: rgba(61, 131, 131, 0.733);
+    max-width: 60%;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid rgb(0, 25, 79);
+}
+.border{
+    width: 965pt;
+    margin: 0 auto;
+    border: 1px solid gray;
+    background-color: rgba(159, 190, 217, 0.401);
+    padding: 10px;
+}
+footer{
+    border: 3px solid rgb(0, 25, 79);
+    background-color: rgb(68, 68, 156);
+}
+.float{
+    float: right;
+    height: 300px;
+    margin-top: 30px;
+    margin-right: 10pt;
+    background-color: rgba(165, 165, 165, 0.459);
+    padding: 5px;
+    text-align: center;
+    width: 200pt;
+}
+.gray{
+    font-size: 10pt;
+    color: rgb(77, 79, 82);
+}
+.blue{
+    font-size: 12pt;
+    color: rgb(70, 70, 196);
+}

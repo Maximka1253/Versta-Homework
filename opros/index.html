@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Опрос первокурсников</title>
+        <link rel="stylesheet" type="text/css"
+              href="./css/styles.css">
+    </head>
+    <body>
+        <h1>Опрос студентов 1-го курса</h1>
+        <form action="#" method="get"
+              oninput="forrange.value=range.value">
+            <table>
+                <tr>
+                    <td>ФИО</td>
+                    <th>
+                        <input type="text" required placeholder="Фамилия Имя Отчество">
+                    </th>
+                </tr>
+                <tr>
+                    <td>Номер телефона</td>
+                    <th>
+                        <input type="tel" required placeholder="8-xxx-xxx-xx-xx" pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                    </th>
+                </tr>
+                <tr>
+                    <td>Электронная почта</td>
+                    <th><input type="email" placeholder="ваш@email.com" required></th>
+                </tr>
+                <tr>
+                    <td>Номер карты</td>
+                    <th>
+                        <input type="number" placeholder="(необязательно)">
+                    </th>
+                </tr>
+                <tr>
+                    <td>Число на обратной стороне карты</td>
+                    <th>
+                        <input type="number" maxlength="3" placeholder="xxx (необязательно)">
+                    </th>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <label class="block-example">Ваш любимый предмет</label>
+                    </td>
+                    <th>
+                        <select name="sphere">
+                            <option value="fizra">Физ-ра</option>
+                            <option value="prog">Программирование</option>
+                            <option value="inf">Информатика</option>
+                            <option value="math">Математика</option>
+                            <option value="razm">Разметка сетевого контента</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="block-example">Почему вы поступили сюда</label>
+                    </td>
+                    <th>
+                        <select name="postup">
+                            <option value="zhel">По собственному желанию</option>
+                            <option value="bliz">Близко живу</option>
+                            <option value="alt">Нету альтернатив</option>
+                            <option value="poluch">Так получилось</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </th>
+                </tr>
+            </table>
+            
+            <div>
+                <fieldset class="baza">
+                    <label>Сколько баллов у вас за ЕГЭ</label>
+                    <div>
+                        <input type="radio" name="ball" value="1" id="ball150">
+                        <label for="ball150">от 0 до 150 баллов</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="ball" value="2" id="ball190">
+                        <label for="ball190">от 151 до 190 баллов</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="ball" value="3" id="ball230">
+                        <label for="ball230">от 191 до 230 баллов</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="ball" value="4" id="ball250">
+                        <label for="ball250">от 231 до 250 баллов</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="ball" value="5" id="ball270">
+                        <label for="ball270">от 251 до 270 баллов</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="ball" value="6" id="ball300">
+                        <label for="ball300">от 271 до 300 баллов</label>
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset class="base">
+                <div class="center">
+                    <label>Напишите что вы думаете о месте, куда вы поступили</label>
+                    <textarea rows="10" cols="55"></textarea>
+                </div>
+            </fieldset>
+            <div>
+                <fieldset class="baza">
+                    <p>Оцените ваше учебное заведение от 0 до 100</p>
+                    <label>0</label>
+                    <input type="range" min="0" max="100" id="range">
+                    <label>100</label>
+                    <output name="forrange">0</output>
+                </fieldset>
+            </div>
+            <div class="sogl">
+                <input type="checkbox" checked id="check">
+                <label for="check">Согласны ли вы с обработкой персональных данных</label>
+            </div>
+            <input type="submit">
+        </form>
+    </body>
+</html>

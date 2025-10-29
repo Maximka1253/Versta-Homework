@@ -1,0 +1,46 @@
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18pt;
+    color: rgb(128, 57, 41);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid rgb(176, 105, 24);
+}
+.flex{
+    height: 400px;
+    border: 2px solid brown;
+    text-align: center;
+}
+.site-header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 100px;
+    border: 2px solid salmon;
+    background-color: burlywood;
+}
+.promo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 2px solid rgb(173, 41, 26);
+    background-color: blanchedalmond;
+}
+.sidebar{
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    height: auto;
+}
+.site-footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    height: 100px;
+    border: 2px solid gb(173, 41, 26);
+    background-color: burlywood;
+}

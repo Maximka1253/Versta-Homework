@@ -1,0 +1,33 @@
+body{
+    background-color: aliceblue;
+}
+.table{
+    display: table;
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    text-align: center;
+}
+.tablehead{
+    display: table-row;
+    background-color: rgba(82, 82, 189, 0.784);
+    border: 1px solid rgb(32, 87, 122);
+    height: 100pt;
+}
+
+.cell{
+    display: table-cell;
+    background-color: rgba(100, 131, 223, 0.705);
+    border: 1px solid rgb(52, 112, 233);
+    padding: 10px;
+}
+.area{
+    background-color: rgb(59, 207, 188);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid darkblue;
+}
+.tablemain{
+    display: table-row;
+}
