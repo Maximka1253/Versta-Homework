@@ -1,0 +1,32 @@
+*{
+    background-color: white;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flag{
+    height: 275px;
+    width: 450px;
+    margin: 10px;
+}
+.ir{
+    background: linear-gradient(to right, green 33.3%,white 33.3% 66.6%,orange 66.6% 100%);
+}
+.hna{
+    background: linear-gradient(45deg,red 38%, white 38% 41%,black 41% 59%,white 59% 62%,red 62% 100%);
+}
+.fl3{
+    background: linear-gradient(red 25%,darkblue 25% 50%,yellow 50% 75%,rgb(11, 164, 11) 75% 100%);
+}
+.fl4{
+    background: linear-gradient(rgb(97, 157, 209) 32%, white 32% 36%, black 36% 66%, white 66% 70%, rgb(97, 157, 209) 70% 100%);
+}
+.fl5{
+    background: linear-gradient(-45deg, green 38%, rgb(245, 245, 14) 38% 62%, red 62% 100%);
+}
+.fl6{
+
+}
