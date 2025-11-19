@@ -1,16 +1,25 @@
-*{
-    background-color: white;
-}
 body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: rgba(222, 163, 107, 0.658);
+}
+*{
+    font-size: 18pt;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .flag{
     height: 275px;
     width: 450px;
+}
+.box{
     margin: 10px;
+    height: 320px;
+    background-color: rgb(232, 158, 61);
+    box-shadow: 0 10px 2px rgb(232, 158, 61);
 }
 .ir{
     background: linear-gradient(to right, green 33.3%,white 33.3% 66.6%,orange 66.6% 100%);
@@ -28,5 +37,6 @@ body{
     background: linear-gradient(-45deg, green 38%, rgb(245, 245, 14) 38% 62%, red 62% 100%);
 }
 .fl6{
-
+    background: linear-gradient(to right, white 33.33%, transparent 33.33%),
+    linear-gradient(red 50%, green 50%);
 }

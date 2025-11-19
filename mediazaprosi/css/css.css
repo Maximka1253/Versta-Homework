@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    outline: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.3s;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(22, 22, 22);
+    min-height: 200vh;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+.nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 9%;
+}
+.logo{
+    font-size: 40pt;
+    color: white;
+}
+.nav_menu{
+    display: flex;
+    gap: 1.5rem;
+}
+.nav_menu .nav_link{
+    color: white;
+    font-size: 15pt;
+    position: relative;
+}
+@media screen and (max-width: 598px)
+{
+    
+    .nav_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(22, 22, 22);
+        padding: 15px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .ham-button{
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        display: block;
+    }
+}
+
+
+
+
+
+
+#ham-check{
+    opacity: 0;
+    position: absolute;
+}
+.ham-button{
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.ham-button>span,
+.ham-button>span::before,
+.ham-button>span::after{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    top: 10px;
+    background-color: rgb(255, 255, 255);
+    transition-duration: 0.2s;
+}
+.ham-button>span::before{
+    top: -10px;
+    content: "";
+}
+.ham-button>span::after{
+    top: 10px;
+    content: "";
+}
+#ham-check:checked ~ .ham-button>span::after{
+    top: 0px;
+    transform: rotate(90deg);
+    transition-duration: 0.2s;
+    height: 4px;
+}
+#ham-check:checked ~ .ham-button>span::before{
+    top: 0px;
+    transition-duration: 0.2s;
+    height: 4px;
+}
+#ham-check:checked ~ .ham-button>span{
+    top: 0px;
+    transform: rotate(-45deg);
+    transition-duration: 0.2s;
+    height: 4px;
+}
