@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Динамический список</title>
+    <link rel="stylesheet" href="./css/css.css" type="text/css">
+</head>
+<body>
+    <h2 id="list-header">Список дел:</h2>
+    <div id="app-container"></div>
+
+    <script>
+        const container = document.getElementById('app-container');
+
+        const ul = document.createElement('ul');
+        ul.classList.add('dynamic-list');
+        container.appendChild(ul);
+
+        while (true) {
+            let userText = prompt("Введите текст пункта списка (или нажмите Отмена/Enter для завершения):");
+
+            if (userText === null || userText.trim() === "") {
+                break;
+            }
+            let li = document.createElement('li');
+            
+            li.textContent = userText;
+            
+            li.classList.add('list-item');
+            
+            ul.appendChild(li);
+        }
+
+        if (ul.children.length === 0) {
+            let emptyMsg = document.createElement('li');
+            emptyMsg.textContent = "Список пуст";
+            emptyMsg.classList.add('list-item');
+            ul.appendChild(emptyMsg);
+        }
+        const themeBtn = document.createElement('button');
+        themeBtn.textContent = "Переключить тему";
+        themeBtn.classList.add('theme-btn');
+        
+        container.appendChild(themeBtn);
+
+
+        themeBtn.addEventListener('click', function() {
+            ul.classList.toggle('theme-dark');
+            if (ul.classList.contains('theme-dark')) {
+                themeBtn.textContent = "Вернуть светлую тему";
+            } else {
+                themeBtn.textContent = "Включить темную тему";
+            }
+        });
+        const header = document.getElementById('list-header');
+        header.style.cursor = 'pointer'; 
+        header.title = "Нажми меня для смены темы";
+        header.addEventListener('click', () => {
+             ul.classList.toggle('theme-dark');
+        });
+
+    </script>
+</body>
+</html>
