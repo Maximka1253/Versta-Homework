@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отрезки</title>
+</head>
+<body>
+    <script>
+        arr = []
+        let a = prompt("Введите число a")
+        let b = prompt("Введите число b большее чем a")
+        if (a > b){
+            reportError("a больше чем b")
+            alert("Ошибка: a больше чем b")
+        }
+        else{
+            for (i = a; i <= b; i++){
+                if (i % 3 == 0){
+                    arr += i
+                    console.log(i)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

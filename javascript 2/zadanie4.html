@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toUpperCase</title>
+</head>
+<body>
+    <script>
+    function camelize(str) {
+        let words = str.split('-');
+        let result = words[0];
+        for (let i = 1; i < words.length; i++) {
+        result += words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        }
+        return result;
+    }
+
+    let Text = prompt("Введите текст в формате ###-###-##")
+    alert(camelize(Text))
+    </script>
+</body>
+</html>

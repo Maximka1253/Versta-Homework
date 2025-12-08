@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Natural</title>
+</head>
+<body>
+    <script>
+        arr = []
+        let N = prompt("Введите натуральное число N")
+        if (N < 0){
+            reportError("число N должно быть натуральным")
+            alert("число N должно быть натуральным")
+        }
+        else if (N**0.5%2==0 || N == 2){
+            alert("YES")
+            console.log("YES")
+        }
+        else{
+            alert("NO")
+            console.log("NO")
+        }
+    </script>
+</body>
+</html>
