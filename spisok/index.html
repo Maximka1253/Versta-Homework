@@ -1,53 +1,50 @@
-<html>
-    <head>
-        <title>Вложенный список</title>
-    </head>
-    <body>
-        <script>
-            let data = {
-                "Периферия": {
-                    "Мыши": {
-                        "Logitech G102": 13,
-                        "Razer DeathAdder": 10
-                    },
-                    "Клавиатуры": {
-                        "ArdorGaming": 53
-                    }
-                },
-                "Комплектующие для пк": {
-                    "Процессоры": {
-                        "intel": 162,
-                        "amd": 202
-                    },
-                    "Видеокарты": {
-                        "nvidia": 123,
-                        "amd": 107,
-                        "intel": 15
-                    }
-                }
-            }
-            function createUl(obj) {
-                if (!Object.keys(obj).length)
-                    return
-                let ul = document.createElement('ul')
-                for (let key in obj) {
-                    let li = document.createElement('li')
-                if (!isNaN(obj[key]))
-                    li.textContent = key + ' ' + obj[key]
-                else
-                    li.textContent = key
-                let childrenUl = createUl(obj[key])
-                    if (childrenUl) {
-                        li.append(childrenUl)
-                    }
-                    ul.append(li)
-                }
-                return ul
-            }
-            function createTree(container, obj) {
-                document.querySelector(container).append(createUl(obj))
-            }
-            createTree('body', data)
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамический список</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+        <h2>Вложенный список</h2>
+        <ul id="tree-list" class="tree">
+            <li>Продукты
+                <ul>
+                    <li>Овощи
+                        <ul>
+                            <li>Томаты</li>
+                            <li>Огурцы</li>
+                        </ul>
+                    </li>
+                    <li>Фрукты
+                        <ul>
+                            <li>Яблоки</li>
+                            <li>Бананы
+                                <ul>
+                                    <li>Желтые</li>
+                                    <li>Зеленые</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Случайная таблица</h2>
+        <table id="color-table">
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
